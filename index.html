@@ -57,23 +57,34 @@ nav a:hover{
     margin-top:20px;
 }
 
-/* MULTIPLE IMAGE GALLERY */
+/* HORIZONTAL IMAGE SLIDER */
 
 .gallery{
     display:flex;
-    justify-content:center;
+    overflow-x:auto;
+    scroll-behavior:smooth;
     gap:15px;
-    flex-wrap:wrap;
+    padding:20px;
     margin-top:20px;
 }
 
+.gallery::-webkit-scrollbar{
+    height:8px;
+}
+
+.gallery::-webkit-scrollbar-thumb{
+    background:#1b3b6f;
+    border-radius:10px;
+}
+
 .gallery img{
-    width:250px;
-    height:180px;
+    min-width:300px;
+    height:200px;
     object-fit:cover;
     border-radius:10px;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
     transition:transform 0.3s;
+    flex-shrink:0;
 }
 
 .gallery img:hover{
@@ -134,7 +145,7 @@ footer{
     <!-- Main First Image -->
     <img src="Image.png" alt="Company Main Image">
 
-    <!-- Additional Images -->
+    <!-- Horizontal Scroll Gallery -->
     <div class="gallery">
         <img src="Image1.png" alt="Company Image 1">
         <img src="Image2.png" alt="Company Image 2">

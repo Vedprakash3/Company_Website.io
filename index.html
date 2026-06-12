@@ -8,23 +8,28 @@
 <style>
 
 body{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin:0;
-    background:#f4f4f4;
+    background:#f4dbd2; /* Theme Light Peach Background */
+    color: #3e1e0b; /* Theme Dark Brown Text */
     scroll-behavior:smooth;
 }
 
 header{
-    background:#0a2540;
-    color:white;
+    background:#3e1e0b; /* Theme Deep Dark Brown */
+    color:#c28c2e; /* Theme Premium Gold */
     padding:20px;
     text-align:center;
+}
+
+header p {
+    color: white;
 }
 
 /* NAVBAR */
 
 nav{
-    background:#1b3b6f;
+    background:#5a2e16; /* Theme Medium Warm Brown */
     padding:12px;
     display:flex;
     justify-content:center;
@@ -37,10 +42,11 @@ nav a{
     font-weight:bold;
     font-size:16px;
     padding:5px 6px;
+    transition: 0.3s;
 }
 
 nav a:hover{
-    color:#00d4ff;
+    color:#c28c2e; /* Hover effect changes to Theme Gold */
 }
 
 /* HERO */
@@ -48,13 +54,19 @@ nav a:hover{
 .hero{
     text-align:center;
     padding:40px;
-    background:white;
+    background:#3e1e0b; /* Hero Section with Deep Dark Brown */
+    color: white;
+}
+
+.hero h2 {
+    color: #c28c2e; /* Gold Title */
 }
 
 .hero img{
     width:300px;
     border-radius:10px;
     margin-top:20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 /* HORIZONTAL IMAGE SLIDER */
@@ -73,7 +85,7 @@ nav a:hover{
 }
 
 .gallery::-webkit-scrollbar-thumb{
-    background:#1b3b6f;
+    background:#c28c2e; /* Scrollbar changes to Gold */
     border-radius:10px;
 }
 
@@ -82,7 +94,7 @@ nav a:hover{
     height:200px;
     object-fit:cover;
     border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
     transition:transform 0.3s;
     flex-shrink:0;
 }
@@ -105,18 +117,26 @@ section{
     margin:20px;
     padding:20px;
     border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
     display:inline-block;
     width:250px;
+    text-align: left;
+    border-top: 4px solid #c28c2e; /* Top border accent in Gold */
+}
+
+.service h3 {
+    color: #3e1e0b;
+    margin-top: 0;
 }
 
 /* FOOTER */
 
 footer{
-    background:#0a2540;
+    background:#3e1e0b; /* Dark Brown Footer */
     color:white;
     text-align:center;
     padding:15px;
+    border-top: 2px solid #c28c2e;
 }
 
 </style>
@@ -136,16 +156,12 @@ footer{
     <a href="#services">Service</a>
 </nav>
 
-<!-- HOME -->
-
 <div id="home" class="hero">
 
     <h2>Welcome to Our Company</h2>
 
-    <!-- Main First Image -->
     <img src="Image.png" alt="Company Main Image">
 
-    <!-- Horizontal Scroll Gallery -->
     <div class="gallery">
         <img src="Image1.png" alt="Company Image 1">
         <img src="Image2.png" alt="Company Image 2">
@@ -154,8 +170,6 @@ footer{
     <p>We provide professional digital and technology solutions for businesses.</p>
 
 </div>
-
-<!-- ABOUT -->
 
 <section id="about">
 
@@ -168,8 +182,6 @@ footer{
 
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact">
 
     <h2>Contact Us</h2>
@@ -179,8 +191,6 @@ footer{
     <p>Phone: +91 9876543210</p>
 
 </section>
-
-<!-- SERVICES -->
 
 <section id="services">
 
